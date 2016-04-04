@@ -1,11 +1,11 @@
 Name:       clr-rpm-config
 Summary:    Clear Linux specific rpm configuration files
-Version:    34
-Release:    34a
+Version:    35
+Release:    35
 Group:      Development/System
 License:    GPL-2.0+
 URL:        http://www.clearlinux.org
-Source0:    http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-34.tar.gz
+Source0:    http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-35.tar.gz
 AutoReqProv: No
 Requires: clr-python-timestamp
 
