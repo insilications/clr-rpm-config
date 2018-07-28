@@ -1,11 +1,11 @@
 Name:       clr-rpm-config
 Summary:    Clear Linux specific rpm configuration files
-Version:    93
-Release:    95
+Version:    94
+Release:    96
 Group:      Development/System
 License:    GPL-2.0+
 URL:        http://www.clearlinux.org
-Source0:    http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-93.tar.gz
+Source0:    http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-94.tar.gz
 AutoReqProv: No
 Requires: clr-python-timestamp
 
