@@ -4,13 +4,15 @@
 #
 Name     : clr-rpm-config
 Version  : 110
-Release  : 111
+Release  : 112
 URL      : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-110.tar.xz
 Source0  : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-110.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: clr-rpm-config-license = %{version}-%{release}
+Requires: clr-avx-tools
+Requires: clr-python-timestamp
 
 %description
 No detailed description available
@@ -31,12 +33,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1544732434
+export SOURCE_DATE_EPOCH=1544737400
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1544732434
+export SOURCE_DATE_EPOCH=1544737400
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-rpm-config
 cp LICENSE %{buildroot}/usr/share/package-licenses/clr-rpm-config/LICENSE
