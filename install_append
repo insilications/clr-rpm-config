@@ -1,0 +1,8 @@
+mkdir -p %{buildroot}/usr/lib/rpm
+ln -s clr %{buildroot}/usr/lib/rpm/unknown
+ln -s clr %{buildroot}/usr/lib/rpm/generic
+ln -s clr %{buildroot}/usr/lib/rpm/redhat
+ln -s clr %{buildroot}/usr/lib/rpm/koji
+ln -s clr %{buildroot}/usr/lib/rpm/pc
+rm -f %{buildroot}/usr/lib/rpm/clr/perl.prov
+ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
