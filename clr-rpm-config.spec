@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 204
-Release  : 116
+Release  : 117
 URL      : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-204.tar.xz
 Source0  : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-204.tar.xz
 Summary  : No detailed summary available
