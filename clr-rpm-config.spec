@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 205
-Release  : 205
+Release  : 206
 URL      : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-205.tar.xz
 Source0  : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-205.tar.xz
 Summary  : No detailed summary available
