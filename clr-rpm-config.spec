@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 211
-Release  : 211
+Release  : 212
 URL      : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-211.tar.xz
 Source0  : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-211.tar.xz
 Summary  : No detailed summary available
@@ -29,13 +29,14 @@ license components for the clr-rpm-config package.
 
 %prep
 %setup -q -n clr-rpm-config-211
+cd %{_builddir}/clr-rpm-config-211
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570133401
+export SOURCE_DATE_EPOCH=1572469064
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -48,10 +49,10 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1570133401
+export SOURCE_DATE_EPOCH=1572469064
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-rpm-config
-cp LICENSE %{buildroot}/usr/share/package-licenses/clr-rpm-config/LICENSE
+cp %{_builddir}/clr-rpm-config-211/LICENSE %{buildroot}/usr/share/package-licenses/clr-rpm-config/4cc77b90af91e615a64ae04893fdffa7939db84c
 %make_install
 ## install_append content
 mkdir -p %{buildroot}/usr/lib/rpm
@@ -115,4 +116,4 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/clr-rpm-config/LICENSE
+/usr/share/package-licenses/clr-rpm-config/4cc77b90af91e615a64ae04893fdffa7939db84c
