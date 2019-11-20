@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 217
-Release  : 220
+Release  : 221
 URL      : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-217.tar.xz
 Source0  : http://localhost/cgit/projects/clr-rpm-config/snapshot/clr-rpm-config-217.tar.xz
 Summary  : No detailed summary available
