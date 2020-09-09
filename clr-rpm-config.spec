@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 20.09.09
-Release  : 222
+Release  : 223
 URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-20.09.09.tar.gz
 Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-20.09.09.tar.gz
 Summary  : No detailed summary available
@@ -27,7 +27,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1599651494
+export SOURCE_DATE_EPOCH=1599653029
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -40,7 +40,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1599651494
+export SOURCE_DATE_EPOCH=1599653029
 rm -rf %{buildroot}
 %make_install
 ## install_append content
