@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 240
-Release  : 242
+Release  : 243
 URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-240.tar.gz
 Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-240.tar.gz
 Summary  : No detailed summary available
@@ -18,16 +18,6 @@ BuildRequires : clr-python-timestamp
 %description
 No detailed description available
 
-%package dev
-Summary: dev components for the clr-rpm-config package.
-Group: Development
-Provides: clr-rpm-config-devel = %{version}-%{release}
-Requires: clr-rpm-config = %{version}-%{release}
-
-%description dev
-dev components for the clr-rpm-config package.
-
-
 %prep
 %setup -q -n clr-rpm-config
 cd %{_builddir}/clr-rpm-config
@@ -38,7 +28,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1600332384
+export SOURCE_DATE_EPOCH=1600332640
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -51,7 +41,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1600332384
+export SOURCE_DATE_EPOCH=1600332640
 rm -rf %{buildroot}
 %make_install
 ## install_append content
@@ -66,9 +56,6 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 ## install_append end
 
 %files
-%defattr(-,root,root,-)
-
-%files dev
 %defattr(-,root,root,-)
 /usr/lib/rpm/clr/LICENSE
 /usr/lib/rpm/clr/VERSION
