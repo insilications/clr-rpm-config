@@ -4,9 +4,9 @@
 #
 Name     : clr-rpm-config
 Version  : 20.09.09
-Release  : 224
-URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-20.09.09.tar.gz
-Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-20.09.09.tar.gz
+Release  : 225
+URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-.tar.gz
+Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -18,6 +18,16 @@ BuildRequires : clr-python-timestamp
 %description
 No detailed description available
 
+%package dev
+Summary: dev components for the clr-rpm-config package.
+Group: Development
+Provides: clr-rpm-config-devel = %{version}-%{release}
+Requires: clr-rpm-config = %{version}-%{release}
+
+%description dev
+dev components for the clr-rpm-config package.
+
+
 %prep
 %setup -q -n clr-rpm-config
 cd %{_builddir}/clr-rpm-config
@@ -26,8 +36,9 @@ cd %{_builddir}/clr-rpm-config
 unset http_proxy
 unset https_proxy
 unset no_proxy
+export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1599653678
+export SOURCE_DATE_EPOCH=1600328404
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -40,7 +51,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1599653678
+export SOURCE_DATE_EPOCH=1600328404
 rm -rf %{buildroot}
 %make_install
 ## install_append content
@@ -55,6 +66,9 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 ## install_append end
 
 %files
+%defattr(-,root,root,-)
+
+%files dev
 %defattr(-,root,root,-)
 /usr/lib/rpm/clr/LICENSE
 /usr/lib/rpm/clr/VERSION
