@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 255
-Release  : 249
+Release  : 250
 URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-255.tar.gz
 Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-255.tar.gz
 Summary  : No detailed summary available
@@ -28,20 +28,20 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608726486
+export SOURCE_DATE_EPOCH=1608745076
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=16 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=16 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=16 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=16 "
 make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1608726486
+export SOURCE_DATE_EPOCH=1608745076
 rm -rf %{buildroot}
 %make_install
 ## install_append content
