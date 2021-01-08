@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 255
-Release  : 261
+Release  : 262
 URL      : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-255.tar.gz
 Source0  : file:///insilications/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-255.tar.gz
 Summary  : No detailed summary available
@@ -28,7 +28,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1610083998
+export SOURCE_DATE_EPOCH=1610084312
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -41,7 +41,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1610083998
+export SOURCE_DATE_EPOCH=1610084312
 rm -rf %{buildroot}
 %make_install
 ## install_append content
