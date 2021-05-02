@@ -28,7 +28,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618959035
+export SOURCE_DATE_EPOCH=1620269002
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -41,7 +41,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1618959035
+export SOURCE_DATE_EPOCH=1620269002
 rm -rf %{buildroot}
 %make_install
 ## install_append content
@@ -59,7 +59,6 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 %defattr(-,root,root,-)
 /usr/lib/rpm/clr/LICENSE
 /usr/lib/rpm/clr/VERSION
-/usr/lib/rpm/clr/abifiles.list
 /usr/lib/rpm/clr/auto_path.tcl
 /usr/lib/rpm/clr/brp-compress
 /usr/lib/rpm/clr/brp-create-abi
@@ -78,11 +77,7 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 /usr/lib/rpm/clr/cmake.prov
 /usr/lib/rpm/clr/config.guess
 /usr/lib/rpm/clr/config.sub
-/usr/lib/rpm/clr/debugfiles.list
-/usr/lib/rpm/clr/debuglinks.list
-/usr/lib/rpm/clr/debugsources.list
 /usr/lib/rpm/clr/dist.sh
-/usr/lib/rpm/clr/elfbins.list
 /usr/lib/rpm/clr/find-provides
 /usr/lib/rpm/clr/find-provides.d/firmware.prov
 /usr/lib/rpm/clr/find-provides.d/modalias.prov
