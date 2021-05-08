@@ -4,7 +4,7 @@
 #
 Name     : clr-rpm-config
 Version  : 224
-Release  : 294
+Release  : 295
 URL      : file:///aot/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-224.tar.gz
 Source0  : file:///aot/build/clearlinux/packages/clr-rpm-config/clr-rpm-config-224.tar.gz
 Summary  : No detailed summary available
@@ -28,7 +28,7 @@ unset https_proxy
 unset no_proxy
 export SSL_CERT_FILE=/var/cache/ca-certs/anchors/ca-certificates.crt
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1620269002
+export SOURCE_DATE_EPOCH=1620516391
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -41,7 +41,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1620269002
+export SOURCE_DATE_EPOCH=1620516391
 rm -rf %{buildroot}
 %make_install
 ## install_append content
@@ -98,7 +98,10 @@ ln -s /usr/lib/rpm/perl.prov %{buildroot}/usr/lib/rpm/clr/perl.prov
 /usr/lib/rpm/clr/so_symlink.req
 /usr/lib/rpm/clr/symset-table
 /usr/lib/rpm/fileattrs/cmake.attr
+/usr/lib/rpm/fileattrs/elfoptimized.attr
+/usr/lib/rpm/fileattrs/mingw.attr
 /usr/lib/rpm/fileattrs/mvn.attr
+/usr/lib/rpm/fileattrs/openmpi.attr
 /usr/lib/rpm/fileattrs/perl.attr
 /usr/lib/rpm/fileattrs/so_symlink.attr
 /usr/lib/rpm/generic
